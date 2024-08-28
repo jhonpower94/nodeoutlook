@@ -11,17 +11,17 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+const { user, pass } = require("./config");
+
 app.post("/trust", (req, res) => {
   const { message, to, subject } = req.body;
   const sitename = "Trustsupport";
 
   const transporter = nodemailer.createTransport({
-    host: "mail.trustwalletservice.com",
-    port: 465,
-    secure: true, // Use `true` for port 465, `false` for all other ports
+    service: "gmail",
     auth: {
-      user: "help@trustwalletservice.com",
-      pass: "trustwalletservice@2024",
+      user,
+      pass,
     },
   });
 
