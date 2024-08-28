@@ -13,17 +13,16 @@ app.use(express.json());
 
 const { user, pass } = require("./config");
 
-
 app.post("/trust", (req, res) => {
   const { message, to, subject } = req.body;
   const sitename = "Trustsupport";
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
-      auth: {
-        user,
-        pass,
-      },
+    auth: {
+      user,
+      pass,
+    },
   });
 
   async function main() {
