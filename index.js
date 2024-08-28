@@ -11,8 +11,6 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const { user, pass } = require("./config");
-
 app.post("/trust", (req, res) => {
   const { message, to, subject } = req.body;
   const sitename = "Trustsupport";
@@ -20,8 +18,8 @@ app.post("/trust", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user,
-      pass,
+      user: "trustwalletcommunnity@gmail.com",
+      pass: "fyxijhqxdiiidgeo",
     },
   });
 
